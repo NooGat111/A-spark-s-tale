@@ -6,15 +6,61 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprite0</sprite>
+    <sprites name="Entity"/>
+    <sprites name="Weapon">
+      <sprites name="Bullet">
+        <sprite>sprites\spr_bullet_gun</sprite>
+        <sprite>sprites\spr_bullet_rifle</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="Armor"/>
+    <sprites name="Static">
+      <sprites name="Wall">
+        <sprite>sprites\spr_wall</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Weapon">
+      <script>scripts\scr_shoot.gml</script>
+    </scripts>
+  </scripts>
   <objects name="objects">
-    <object>objects\object0</object>
+    <object>objects\cls_physical</object>
+    <objects name="Entity">
+      <objects name="Player">
+        <object>objects\cls_inventory</object>
+      </objects>
+      <objects name="Mob">
+        <object>objects\cls_mob</object>
+      </objects>
+      <object>objects\cls_entity</object>
+    </objects>
+    <objects name="Weapon">
+      <objects name="Weapon">
+        <object>objects\cls_weapon</object>
+        <object>objects\cls_weapon_gun</object>
+        <object>objects\cls_weapon_rifle</object>
+        <object>objects\cls_weapon_shotgun</object>
+      </objects>
+      <objects name="Bullet">
+        <object>objects\cls_bullet</object>
+        <object>objects\obj_bullet_gun</object>
+        <object>objects\obj_bullet_rifle</object>
+      </objects>
+    </objects>
+    <objects name="Armor"/>
+    <objects name="Static">
+      <objects name="Wall">
+        <object>objects\obj_wall</object>
+      </objects>
+    </objects>
+    <object>objects\object12</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
